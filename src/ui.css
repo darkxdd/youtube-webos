@@ -1,3 +1,4 @@
+/* General UI Container Styling */
 .ytaf-ui-container {
   position: absolute;
   top: 10%;
@@ -5,83 +6,95 @@
   right: 10%;
   bottom: 10%;
 
-  background: rgba(0, 0, 0, 0.8); /* Uniform dark background */
+  background: rgba(0, 0, 0, 0.95); /* Slightly darker for contrast */
   color: white;
   border-radius: 20px;
   padding: 20px;
   font-size: 1.5rem;
   z-index: 1000;
-
-  /* Add a shadow for depth */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-
-  /* Subtle border to frame the container */
+  
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9); /* Deeper shadow for modern effect */
   border: 2px solid rgba(255, 255, 255, 0.1);
+  
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
 }
 
+/* Focused Elements */
 .ytaf-ui-container :focus {
-  outline: 4px solid rgba(255, 87, 34, 0.8); /* Focus outline for accessibility */
+  outline: 4px solid rgba(255, 87, 34, 1); /* Focus outline in bright orange */
+  transition: outline 0.3s ease; /* Smooth transition for focus state */
 }
 
+/* Header Styling */
 .ytaf-ui-container h1 {
   margin: 0;
   margin-bottom: 0.5em;
   text-align: center;
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability against dark background */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for readability */
+  font-family: 'Roboto', sans-serif; /* Modern font choice */
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
+/* Checkbox Styling */
 .ytaf-ui-container input[type="checkbox"] {
   width: 2rem;
   height: 1.5rem;
-  background: linear-gradient(135deg, #64b5f6, #42a5f5); /* Gradient for checkboxes */
+  background: linear-gradient(135deg, #64b5f6, #42a5f5); /* Smooth gradient for checkboxes */
   border: none;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
 }
 
+.ytaf-ui-container input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #66bb6a, #388e3c); /* Green gradient when checked */
+}
+
+/* Labels Styling */
 .ytaf-ui-container label {
   display: block;
   font-size: 2rem;
-  color: #e3f2fd; /* Soft complementary font color */
+  color: #e3f2fd; /* Light blue for a soft contrast */
+  font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
+/* Notification Container Styling */
 .ytaf-notification-container {
   position: absolute;
   right: 10px;
   bottom: 10px;
   font-size: 16pt;
   z-index: 1200;
+  transition: all 0.3s ease-in-out;
 }
 
 .ytaf-notification-container .message {
-  background: linear-gradient(
-    135deg,
-    rgba(34, 193, 195, 0.7),
-    rgba(253, 187, 45, 0.7)
-  );
+  background: linear-gradient(135deg, rgba(34, 193, 195, 0.8), rgba(253, 187, 45, 0.8));
   color: white;
   padding: 1em;
   margin: 0.5em;
-  transition: all 0.3s ease-in-out;
   opacity: 1;
   line-height: 1.5;
   border-right: 10px solid rgba(50, 255, 50, 0.3);
   display: inline-block;
   float: right;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
 }
 
 .ytaf-notification-container .message-hidden {
   opacity: 0;
-  margin: 0 0.5em;
-  padding: 0 1em;
+  margin: 0;
+  padding: 0;
   line-height: 0;
   transition: opacity 0.3s, margin 0.3s, padding 0.3s;
 }
 
-/* Fixes transparency effect for the video player */
+/* Video Player Shadow (Frosted Glass Effect) */
 .ytlr-watch-default__shadow {
   position: absolute !important;
   width: 100% !important;
@@ -93,24 +106,42 @@
   ) !important;
   background-color: rgba(0, 0, 0, 0) !important;
   pointer-events: none !important;
-  z-index: -1; /* Places the shadow behind content */
+  z-index: -1;
+  backdrop-filter: blur(15px); /* Subtle blur for frosted glass effect */
+  opacity: 0.9; /* Slight opacity for a softer look */
 }
 
 /* Move suggested videos out of the way of the controls */
 .ytlr-pivot--controls .ytlr-pivot__pivot-el {
   opacity: 0 !important;
 }
+
 .ytlr-watch-default__metadata-container {
-  bottom: 6.5rem !important;
-}
-.ytlr-watch-default__transport-controls-container {
-  bottom: 6.5rem !important;
-}
-.ytlr-watch-default__progress-bar {
-  bottom: 1.75rem !important;
+  bottom: 7.5rem !important; /* Adjusted to give more room */
 }
 
-/* Fixes shorts thumbnails */
+.ytlr-watch-default__transport-controls-container {
+  bottom: 7.5rem !important;
+}
+
+.ytlr-watch-default__progress-bar {
+  bottom: 2rem !important;
+}
+
+/* Fix for shorts thumbnails */
 .ytlr-tile-header-renderer--shorts {
   z-index: -1;
+}
+
+/* Adding Hover Effects for Interactivity */
+.ytaf-ui-container:hover {
+  transform: scale(1.02); /* Slight zoom effect when hovering */
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ytaf-notification-container .message:hover {
+  transform: translateX(5px); /* Slight move on hover for notifications */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Light shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
