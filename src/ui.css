@@ -5,32 +5,45 @@
   right: 10%;
   bottom: 10%;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Uniform dark background */
   color: white;
   border-radius: 20px;
   padding: 20px;
   font-size: 1.5rem;
   z-index: 1000;
+
+  /* Add a shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  /* Subtle border to frame the container */
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .ytaf-ui-container :focus {
-  outline: 4px red solid;
+  outline: 4px solid rgba(255, 87, 34, 0.8); /* Focus outline for accessibility */
 }
 
 .ytaf-ui-container h1 {
   margin: 0;
   margin-bottom: 0.5em;
   text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Improves readability against dark background */
 }
 
-.ytaf-ui-container input[type='checkbox'] {
+.ytaf-ui-container input[type="checkbox"] {
   width: 2rem;
   height: 1.5rem;
+  background: linear-gradient(135deg, #64b5f6, #42a5f5); /* Gradient for checkboxes */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .ytaf-ui-container label {
   display: block;
   font-size: 2rem;
+  color: #e3f2fd; /* Soft complementary font color */
 }
 
 .ytaf-notification-container {
@@ -42,16 +55,22 @@
 }
 
 .ytaf-notification-container .message {
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 0.7),
+    rgba(253, 187, 45, 0.7)
+  );
   color: white;
   padding: 1em;
   margin: 0.5em;
   transition: all 0.3s ease-in-out;
   opacity: 1;
-  line-height: 1;
+  line-height: 1.5;
   border-right: 10px solid rgba(50, 255, 50, 0.3);
   display: inline-block;
   float: right;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .ytaf-notification-container .message-hidden {
@@ -59,16 +78,22 @@
   margin: 0 0.5em;
   padding: 0 1em;
   line-height: 0;
+  transition: opacity 0.3s, margin 0.3s, padding 0.3s;
 }
 
 /* Fixes transparency effect for the video player */
 .ytlr-watch-default__shadow {
-  background: none !important;
-  display: block !important;
-  height: 100% !important;
-  pointer-events: none !important;
   position: absolute !important;
   width: 100% !important;
+  height: 100% !important;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 68%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  pointer-events: none !important;
+  z-index: -1; /* Places the shadow behind content */
 }
 
 /* Move suggested videos out of the way of the controls */
