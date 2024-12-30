@@ -127,6 +127,7 @@ function createOptionsPanel() {
   elmContainer.appendChild(createConfigCheckbox('upgradeThumbnails'));
   elmContainer.appendChild(createConfigCheckbox('hideLogo'));
   elmContainer.appendChild(createConfigCheckbox('removeShorts'));
+  elmContainer.appendChild(createConfigCheckbox('enlargeVideosOnHomepage'));
   elmContainer.appendChild(createConfigCheckbox('enableSponsorBlock'));
 
   const elmBlock = document.createElement('blockquote');
