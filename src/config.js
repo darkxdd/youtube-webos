@@ -41,6 +41,13 @@ const configOptions = new Map([
       default: false,
       desc: 'Hide YouTube logo'
     }
+  ],
+  [
+    'enlargeVideosOnHomepage',
+    {
+      default: false,
+      desc: 'Enlarge videos on homepage'
+    }
   ]
 ]);
 
