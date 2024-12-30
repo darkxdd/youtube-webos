@@ -117,15 +117,15 @@
 }
 
 .ytlr-watch-default__metadata-container {
-  bottom: 7.5rem !important; /* Adjusted to give more room */
+  bottom: 6.5rem !important; /* Adjusted to give more room */
 }
 
 .ytlr-watch-default__transport-controls-container {
-  bottom: 7.5rem !important;
+  bottom: 6.5rem !important;
 }
 
 .ytlr-watch-default__progress-bar {
-  bottom: 2rem !important;
+  bottom: 1.75rem !important;
 }
 
 /* Fix for shorts thumbnails */
