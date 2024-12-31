@@ -7,7 +7,7 @@ function addGlobalStyle() {
   document.head.appendChild(
     (function () {
       const x = document.createElement('style');
-      x.innerHTML = '* > video { border: green solid 0px; }';
+      x.innerHTML = '* > video { border: 1px solid transparent; }';
       return x;
     })()
   );
