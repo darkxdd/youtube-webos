@@ -1,54 +1,48 @@
-/* General UI Container Styling */
+/* General UI Container */
 .ytaf-ui-container {
   position: absolute;
   top: 10%;
   left: 10%;
   right: 10%;
   bottom: 10%;
-  background: rgba(0, 0, 0, 0.95);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
   border-radius: 20px;
   padding: 20px;
   font-size: 1.5rem;
   z-index: 1000;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
 }
 
-/* Focused Elements */
+/* Focus State */
 .ytaf-ui-container :focus {
-  outline: 4px solid rgba(255, 87, 34, 1);
-  transition: outline 0.3s ease;
+  outline: 4px solid #FF5722;
 }
 
-/* Header Styling */
+/* Header */
 .ytaf-ui-container h1 {
   margin: 0 0 0.5em;
   text-align: center;
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 4px #000;
 }
 
-/* Checkbox Styling */
+/* Checkbox */
 .ytaf-ui-container input[type="checkbox"] {
   width: 2rem;
   height: 1.5rem;
   background: #42a5f5;
-  border: none;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease;
 }
 
 .ytaf-ui-container input[type="checkbox"]:checked {
   background: #388e3c;
 }
 
-/* Labels Styling */
+/* Labels */
 .ytaf-ui-container label {
   display: block;
   font-size: 2rem;
@@ -57,57 +51,50 @@
   margin-bottom: 0.5em;
 }
 
-/* Notification Container Styling */
+/* Notifications */
 .ytaf-notification-container {
   position: absolute;
   right: 10px;
   bottom: 10px;
   font-size: 16pt;
   z-index: 1200;
-  transition: all 0.3s ease-in-out;
 }
 
 .ytaf-notification-container .message {
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
   padding: 1em;
   margin: 0.5em;
-  opacity: 1;
   line-height: 1.5;
   border-right: 10px solid rgba(50, 255, 50, 0.3);
-  display: inline-block;
   float: right;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s ease-in-out;
 }
 
 .ytaf-notification-container .message-hidden {
+  visibility: hidden;
   opacity: 0;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-  transition: opacity 0.3s, margin 0.3s, padding 0.3s;
 }
 
-/* Video Player Shadow (Frosted Glass Effect) */
+/* Video Player Shadow */
 .ytlr-watch-default__shadow {
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 50%,
+    transparent 50%,
     rgba(0, 0, 0, 0.4) 75%,
     rgba(0, 0, 0, 0.95) 100%
   ) !important;
-  background-color: transparent !important;
-  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
   height: 100% !important;
   pointer-events: none !important;
-  position: absolute !important;
-  width: 100% !important;
-  z-index: 1 !important;
+  z-index: -1 !important;
 }
 
-/* Move suggested videos out of the way of the controls */
+/* Transport Controls */
 .ytlr-pivot--controls .ytlr-pivot__pivot-el {
   opacity: 0 !important;
 }
@@ -121,20 +108,6 @@
   bottom: 1.75rem !important;
 }
 
-/* Fix for shorts thumbnails */
 .ytlr-tile-header-renderer--shorts {
   z-index: -1;
-}
-
-/* Adding Hover Effects for Interactivity */
-.ytaf-ui-container:hover {
-  transform: scale(1.5);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ytaf-notification-container .message:hover {
-  transform: translateX(5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
