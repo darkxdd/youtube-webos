@@ -92,14 +92,19 @@
 
 /* Video Player Shadow (Frosted Glass Effect) */
 .ytlr-watch-default__shadow {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  ) !important;
+  background-color: transparent !important;
+  display: block !important;
+  height: 100% !important;
+  pointer-events: none !important;
   position: absolute !important;
   width: 100% !important;
-  height: 100% !important;
-  background-color: rgba(0, 0, 0, 0) !important;
-  pointer-events: none !important;
-  z-index: -1;
-  backdrop-filter: blur(15px);
-  opacity: 0.9;
+  z-index: 1 !important;
 }
 
 /* Move suggested videos out of the way of the controls */
