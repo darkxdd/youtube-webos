@@ -1,23 +1,20 @@
 /* General UI Container */
 .ytaf-ui-container {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
+  inset: 10%;
   background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 20px;
   font-size: 1.5rem;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 /* Focus State */
 .ytaf-ui-container :focus {
-  outline: 4px solid #FF5722;
+  outline: 3px solid #FF5722;
 }
 
 /* Header */
@@ -26,7 +23,7 @@
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 2px 4px #000;
+  text-shadow: 0 1px 3px #000;
 }
 
 /* Checkbox */
@@ -35,7 +32,7 @@
   height: 1.5rem;
   background: #42a5f5;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .ytaf-ui-container input[type="checkbox"]:checked {
@@ -56,7 +53,7 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
-  font-size: 16pt;
+  font-size: 1rem;
   z-index: 1200;
 }
 
@@ -64,12 +61,12 @@
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 1em;
-  margin: 0.5em;
+  margin: 0.5em 0;
   line-height: 1.5;
   border-right: 10px solid rgba(50, 255, 50, 0.3);
-  float: right;
   border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .ytaf-notification-container .message-hidden {
@@ -79,34 +76,30 @@
 
 /* Video Player Shadow */
 .ytlr-watch-default__shadow {
-  background-image: linear-gradient(
+  background: linear-gradient(
     to bottom,
     transparent 50%,
     rgba(0, 0, 0, 0.4) 75%,
     rgba(0, 0, 0, 0.95) 100%
-  ) !important;
-  background-color: transparent !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  pointer-events: none !important;
-  z-index: -1 !important;
+  );
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Transport Controls */
 .ytlr-pivot--controls .ytlr-pivot__pivot-el {
-  opacity: 0 !important;
+  opacity: 0;
 }
 
 .ytlr-watch-default__metadata-container,
 .ytlr-watch-default__transport-controls-container {
-  bottom: 6.5rem !important;
+  bottom: 6.5rem;
 }
 
 .ytlr-watch-default__progress-bar {
-  bottom: 1.75rem !important;
+  bottom: 1.75rem;
 }
 
 .ytlr-tile-header-renderer--shorts {
