@@ -5,43 +5,39 @@
   left: 10%;
   right: 10%;
   bottom: 10%;
-
-  background: rgba(0, 0, 0, 0.95); /* Slightly darker for contrast */
+  background: rgba(0, 0, 0, 0.95);
   color: white;
   border-radius: 20px;
   padding: 20px;
   font-size: 1.5rem;
   z-index: 1000;
-  
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9); /* Deeper shadow for modern effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
   border: 2px solid rgba(255, 255, 255, 0.1);
-  
-  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+  backdrop-filter: blur(10px);
 }
 
 /* Focused Elements */
 .ytaf-ui-container :focus {
-  outline: 4px solid rgba(255, 87, 34, 1); /* Focus outline in bright orange */
-  transition: outline 0.3s ease; /* Smooth transition for focus state */
+  outline: 4px solid rgba(255, 87, 34, 1);
+  transition: outline 0.3s ease;
 }
 
 /* Header Styling */
 .ytaf-ui-container h1 {
-  margin: 0;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em;
   text-align: center;
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for readability */
-  font-family: 'Roboto', sans-serif; /* Modern font choice */
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Checkbox Styling */
 .ytaf-ui-container input[type="checkbox"] {
   width: 2rem;
   height: 1.5rem;
-  background: linear-gradient(135deg, #64b5f6, #42a5f5); /* Smooth gradient for checkboxes */
+  background: #42a5f5;
   border: none;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -49,14 +45,14 @@
 }
 
 .ytaf-ui-container input[type="checkbox"]:checked {
-  background: linear-gradient(135deg, #66bb6a, #388e3c); /* Green gradient when checked */
+  background: #388e3c;
 }
 
 /* Labels Styling */
 .ytaf-ui-container label {
   display: block;
   font-size: 2rem;
-  color: #e3f2fd; /* Light blue for a soft contrast */
+  color: #e3f2fd;
   font-weight: 500;
   margin-bottom: 0.5em;
 }
@@ -72,7 +68,7 @@
 }
 
 .ytaf-notification-container .message {
-  background: linear-gradient(135deg, rgba(34, 193, 195, 0.8), rgba(253, 187, 45, 0.8));
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 1em;
   margin: 0.5em;
@@ -99,16 +95,11 @@
   position: absolute !important;
   width: 100% !important;
   height: 100% !important;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 68%,
-    rgba(0, 0, 0, 1) 100%
-  ) !important;
   background-color: rgba(0, 0, 0, 0) !important;
   pointer-events: none !important;
   z-index: -1;
-  backdrop-filter: blur(15px); /* Subtle blur for frosted glass effect */
-  opacity: 0.9; /* Slight opacity for a softer look */
+  backdrop-filter: blur(15px);
+  opacity: 0.9;
 }
 
 /* Move suggested videos out of the way of the controls */
@@ -116,10 +107,7 @@
   opacity: 0 !important;
 }
 
-.ytlr-watch-default__metadata-container {
-  bottom: 6.5rem !important; /* Adjusted to give more room */
-}
-
+.ytlr-watch-default__metadata-container,
 .ytlr-watch-default__transport-controls-container {
   bottom: 6.5rem !important;
 }
@@ -135,13 +123,13 @@
 
 /* Adding Hover Effects for Interactivity */
 .ytaf-ui-container:hover {
-  transform: scale(1.02); /* Slight zoom effect when hovering */
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6); /* More prominent shadow on hover */
+  transform: scale(1.5);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ytaf-notification-container .message:hover {
-  transform: translateX(5px); /* Slight move on hover for notifications */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Light shadow on hover */
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
