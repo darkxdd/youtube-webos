@@ -78,13 +78,14 @@
 }
 
 /* Video Player Shadow */
-.ytlr-watch-default__shadow {
+..ytlr-watch-default__shadow {
   background-image: linear-gradient(
     to bottom,
     transparent 50%,
     rgba(0, 0, 0, 0.4) 75%,
     rgba(0, 0, 0, 0.95) 100%
   ) !important;
+  background-color: transparent !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
